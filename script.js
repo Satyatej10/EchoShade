@@ -138,7 +138,29 @@ const predefinedPalettes = {
   pinkorange: ['#E91E63', '#F06292', '#FF9800', '#FF5722', '#FF8A65'],
   graygreen: ['#9E9E9E', '#757575', '#AED581', '#8BC34A', '#4CAF50'],
   brownpurple: ['#795548', '#5D4037', '#8E24AA', '#AB47BC', '#BA68C8'],
-  blackred: ['#212121', '#424242', '#B71C1C', '#8E0000', '#FF0000']
+  blackred: ['#212121', '#424242', '#B71C1C', '#8E0000', '#FF0000'],
+
+  // New Filter-Inspired Palettes
+  'pleasant vignette': ['#FFD1DC', '#E6B8A8', '#C8E6C9', '#AEDFF2', '#8DB6C9'], // Soft edges, muted center
+  'dark sepia': ['#403D2E', '#5C5540', '#73694E', '#8B7F5C', '#A3956A'], // Warm, vintage brown tones
+  'calm noir': ['#A0C4FF', '#829DBF', '#64768F', '#4A5A6F', '#2E3D4F'], // Desaturated, moody blues
+  'spooky haze': ['#2A1B3D', '#3F2D5A', '#544077', '#7A5E9C', '#A084B8'], // Misty purples
+  'warm glow': ['#FF6F61', '#FF8F77', '#FFB38F', '#FFD7A7', '#FFF1C3'], // Radiant, soft warmth
+  'sunlight fade': ['#FFF176', '#FFE066', '#FFCF56', '#FFB846', '#FFA636'], // Gradual fade to darker yellows
+  'forest mist': ['#2F4F4F', '#486767', '#628080', '#7C9999', '#96B2B2'], // Foggy greens
+  'ocean vintage': ['#00CED1', '#3AA8B3', '#548295', '#6D5C77', '#873659'], // Faded, old-photo blues
+  'stormy grain': ['#37474F', '#4F5E66', '#67757D', '#808C94', '#99A3AB'], // Textured, muted grays
+  'icy frost': ['#E0F7FA', '#C6E2E8', '#ACD0D6', '#92BEC4', '#78ABB2'], // Cold, frosty fade
+  'desert dusk': ['#D2A96A', '#C89C5A', '#BE8F4A', '#B4823A', '#AA752A'], // Warm, dimming tones
+  'twilight blur': ['#4B3F72', '#64568F', '#7D6DAC', '#9684C9', '#AF9BE6'], // Soft, hazy purples
+  'retro fade': ['#FF69B4', '#E65A9F', '#CC4B8A', '#B33C75', '#992D60'], // Faded vibrant pinks
+  'pastel wash': ['#F8BBD0', '#E6A9BE', '#D497AC', '#C2859A', '#B07388'], // Watercolor-like fade
+  'vibrant pop': ['#FF4081', '#E63974', '#CC3267', '#B32B5A', '#99244D'], // Bold, saturated shift
+  'serene mist': ['#E1F5FE', '#CDE6F5', '#B8D7EC', '#A4C8E3', '#90B9DA'], // Gentle blue haze
+  'mystical glow': ['#4A235A', '#5F2E72', '#74398A', '#8944A2', '#9E4FBA'], // Radiant purple sheen
+  'earthy sepia': ['#5D4037', '#6F5045', '#816053', '#937061', '#A5806F'], // Warm, vintage earth tones
+  'cosmic dust': ['#1B263B', '#2F3A55', '#434E6F', '#576289', '#6B76A3'], // Starry, muted blues
+  'tropical fade': ['#FF6F61', '#E66558', '#CC5B4F', '#B35146', '#99473D'] // Faded tropical reds
 };
 // Function to generate a dynamic palette for unrecognized inputs
 function generateDynamicPalette(theme) {

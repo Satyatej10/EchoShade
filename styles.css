@@ -1,64 +1,157 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Subtle gradient background */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: #f5f5f5;
-  margin: 0;
+  align-items: center;
   padding: 20px;
 }
+
+/* Container */
 .container {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
   text-align: center;
-  max-width: 800px;
 }
+
+/* Heading */
 h1 {
+  font-size: 28px;
+  font-weight: 600;
   color: #2c3e50;
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
 }
-input {
-  padding: 12px;
-  margin: 10px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-button {
-  padding: 12px 25px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-button:hover {
-  background-color: #2980b9;
-}
-#palette {
+
+/* Input Group */
+.input-group {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
-  margin-top: 25px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Responsive for smaller screens */
+}
+
+#theme-input {
+  padding: 12px 20px;
+  width: 300px;
+  max-width: 100%;
+  border: 2px solid #b0bec5;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#theme-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Generate Button */
+.generate-btn {
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Palette Container */
+.palette-container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 10px;
+  min-height: 150px; /* Prevents layout shift before generation */
 }
+
+/* Swatches */
 .swatch {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  color: white;
-  text-shadow: 1px 1px 2px black;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   font-size: 14px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.swatch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Copy Button */
+.copy-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Responsive Design */
 @media (max-width: 600px) {
-  #palette {
-    flex-direction: column;
+  .container {
+    padding: 20px;
   }
+  
+  h1 {
+    font-size: 22px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #theme-input {
+    width: 100%;
+  }
+
   .swatch {
     width: 100%;
+    height: 100px;
   }
 }
